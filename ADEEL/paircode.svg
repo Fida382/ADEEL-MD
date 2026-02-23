@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="32" viewBox="0 0 220 40">
+  <defs>
+    <linearGradient id="royalGrad" x1="0%" y1="0%" x2="200%" y2="0%">
+      <stop offset="0%" stop-color="#FFD700">
+        <animate attributeName="stop-color" values="#FFD700;#FFA500;#FF8C00;#FF1493;#FF00FF;#00BFFF;#1E90FF;#32CD32;#FFD700" dur="12s" repeatCount="indefinite" calcMode="linear"/>
+      </stop>
+      <stop offset="40%" stop-color="#FF1493">
+        <animate attributeName="stop-color" values="#FF1493;#FF00FF;#00BFFF;#1E90FF;#32CD32;#FFD700;#FFA500;#FF8C00;#FF1493" dur="12s" repeatCount="indefinite" calcMode="linear"/>
+      </stop>
+      <stop offset="80%" stop-color="#00BFFF">
+        <animate attributeName="stop-color" values="#00BFFF;#1E90FF;#32CD32;#FFD700;#FFA500;#FF8C00;#FF1493;#FF00FF;#00BFFF" dur="12s" repeatCount="indefinite" calcMode="linear"/>
+      </stop>
+      <stop offset="100%" stop-color="#FFD700">
+        <animate attributeName="stop-color" values="#FFD700;#FFA500;#FF8C00;#FF1493;#FF00FF;#00BFFF;#1E90FF;#32CD32;#FFD700" dur="12s" repeatCount="indefinite" calcMode="linear"/>
+      </stop>
+      <animateTransform attributeName="gradientTransform" type="translate" from="-1,0" to="1,0" dur="8s" repeatCount="indefinite" calcMode="linear"/>
+    </linearGradient>
+    
+    <linearGradient id="softShine" x1="-100%" y1="0" x2="200%" y2="0">
+      <stop offset="0%" stop-color="white" stop-opacity="0"/>
+      <stop offset="50%" stop-color="white" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0"/>
+      <animateTransform attributeName="gradientTransform" type="translate" from="-1,0" to="1,0" dur="5s" repeatCount="indefinite" calcMode="linear"/>
+    </linearGradient>
+    
+    <filter id="premiumGlow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur" opacity="0.4"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <clipPath id="innerArea">
+      <rect x="12" y="12" width="196" height="36" rx="12"/>
+    </clipPath>
+  </defs>
+  
+  <g transform="scale(0.5238,0.5)">
+    <rect x="10" y="10" width="400" height="60" rx="16" fill="#000000" stroke="url(#royalGrad)" stroke-width="3">
+      <animate attributeName="stroke-width" values="3;4;3" dur="3s" repeatCount="indefinite" calcMode="linear"/>
+      <animate attributeName="rx" values="16;18;16" dur="4s" repeatCount="indefinite" calcMode="linear"/>
+    </rect>
+    
+    <rect x="10" y="10" width="400" height="60" rx="16" fill="url(#softShine)"/>
+    
+    <g clip-path="url(#innerArea)" opacity="0.5">
+      <circle cx="80" cy="30" r="8" fill="url(#royalGrad)">
+        <animate attributeName="cy" values="30;50;30" dur="7s" repeatCount="indefinite" calcMode="linear"/>
+        <animate attributeName="r" values="8;12;8" dur="5s" repeatCount="indefinite" calcMode="linear"/>
+      </circle>
+      <circle cx="320" cy="40" r="6" fill="url(#royalGrad)">
+        <animate attributeName="cy" values="40;20;40" dur="6s" repeatCount="indefinite" calcMode="linear"/>
+        <animate attributeName="r" values="6;10;6" dur="4s" repeatCount="indefinite" calcMode="linear"/>
+      </circle>
+    </g>
+    
+    <g transform="translate(28,25)" fill="none" stroke="url(#royalGrad)" stroke-width="3" filter="url(#premiumGlow)">
+      <path d="M18 10 h10 a10 10 0 0 1 0 20 h-10">
+        <animate attributeName="d" values="M18 10 h10 a10 10 0 0 1 0 20 h-10;M18 9 h11 a11 11 0 0 1 0 22 h-11;M18 10 h10 a10 10 0 0 1 0 20 h-10" dur="4s" repeatCount="indefinite" calcMode="linear"/>
+      </path>
+      <path d="M14 30 h-10 a10 10 0 0 1 0-20 h10">
+        <animate attributeName="d" values="M14 30 h-10 a10 10 0 0 1 0-20 h10;M14 31 h-11 a11 11 0 0 1 0-22 h11;M14 30 h-10 a10 10 0 0 1 0-20 h10" dur="4s" repeatCount="indefinite" calcMode="linear"/>
+      </path>
+      <path d="M14 20 h10">
+        <animate attributeName="d" values="M14 20 h10;M14 20 h12;M14 20 h10" dur="3s" repeatCount="indefinite" calcMode="linear"/>
+      </path>
+      <animateTransform attributeName="transform" type="translate" values="28,25;28,24;28,25" dur="3s" repeatCount="indefinite" calcMode="linear"/>
+    </g>
+    
+    <text x="200" y="39" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="900" fill="url(#royalGrad)" filter="url(#premiumGlow)" letter-spacing="1.5">
+      PAIR CODE
+      <animate attributeName="font-size" values="22;23;22" dur="3s" repeatCount="indefinite" calcMode="linear"/>
+      <animate attributeName="letter-spacing" values="1.5;2;1.5" dur="4s" repeatCount="indefinite" calcMode="linear"/>
+    </text>
+    
+    <text x="200" y="58" text-anchor="middle" font-family="Consolas, monospace" font-size="13" font-weight="700" fill="url(#royalGrad)" filter="url(#premiumGlow)" letter-spacing="1">
+      Device Session ID
+      <animate attributeName="opacity" values="0.9;1;0.9" dur="3s" repeatCount="indefinite" calcMode="linear"/>
+    </text>
+  </g>
+</svg>
